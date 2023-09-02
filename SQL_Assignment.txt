@@ -1,0 +1,46 @@
+1. create table Students (name varchar(20),student_id  int primary key not null,department varchar(20));
+
+2. insert into students values("abhi",8,"civil");
+insert into students values("ritika",2,"cse");
+insert into students values("vishal",1,"mech");
+insert into students values("abhilasha",7,"mech");
+insert into students values("asutosh",4,"civil");
+insert into students values("samtosh",5,"civil");
+insert into students values("gayatri",3,"eee");
+insert into students values("suraj",10,"ece");
+insert into students values("akash",6,"cece");
+insert into students values("manoj",9,"cse");
+select * from students;
+drop table students;
+use Trainingdb;
+show tables;
+
+
+3. alter table students add column city varchar(20);
+
+4. update students set city="banglore" where student_Id>=5 ;
+update students  set city="bbsr" where student_Id<5;
+
+5. alter table students add column course varchar(20) not null default "Java";
+
+6. alter table students add column mystate integer;
+
+7. alter table students modify mystate varchar(20) ;
+desc students;
+
+8. alter table students change mystate state varchar(20);
+
+9. alter table students add column zipcode long ;
+
+10. update students set course = 'Angular' where student_id < 3;
+update students set course = 'Spring' where student_id BETWEEN 3 AND 8;
+
+11. select * from students order by name asc;
+
+12. alter table students drop zipcode;
+
+13. select distinct course from students;
+
+14. select name As Stude_name, student_id AS stud_id,city as Stud_city,course as Stud_course,state as Stud_State from students;
+
+ 
